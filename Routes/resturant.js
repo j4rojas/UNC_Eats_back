@@ -37,10 +37,9 @@ router.get('/', (req, res) => {
 });
     
 router.get('/all',cors(),(req, res) => {
-   console.log('all resturants'); //this is just testing if the get method works
+   console.log('all resturants');
    Resturant
    .find()
-//    .find({user:req.user.id})
    .then(resturants => res.json(resturants))
    .catch(err => {
        console.error(err);
